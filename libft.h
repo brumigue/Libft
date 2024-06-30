@@ -6,7 +6,7 @@
 /*   By: brumigue <brumigue@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 02:08:29 by brumigue          #+#    #+#             */
-/*   Updated: 2024/06/23 06:51:06 by brumigue         ###   ########.fr       */
+/*   Updated: 2024/06/30 03:52:09 by brumigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stddef.h>
+# include <stdio.h>
 
 // Libc functions
 int		ft_isalpha(int c);
