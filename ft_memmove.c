@@ -6,7 +6,7 @@
 /*   By: brumigue <brumigue@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 03:28:02 by brumigue          #+#    #+#             */
-/*   Updated: 2024/07/04 01:16:03 by brumigue         ###   ########.fr       */
+/*   Updated: 2024/07/21 02:10:41 by brumigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	src_ptr = (const char *)src;
 	if (!dest && !src)
 		return (NULL);
-	if (n == 0)
-		return (dest);
 	if (dest_ptr > src_ptr && dest_ptr < src_ptr + n)
-		return (ft_memcpy(dest, src, n));
-	else
 	{
+		dest_ptr += n;
+		src_ptr += n;
 		while (n--)
-			*dest_ptr++ = *src_ptr++;
+			*(--dest_ptr) = *(--src_ptr);
 	}
+	else
+		ft_memcpy(dest, src, n);
 	return (dest);
 }
